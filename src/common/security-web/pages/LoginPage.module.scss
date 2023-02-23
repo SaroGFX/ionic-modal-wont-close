@@ -1,0 +1,63 @@
+.LoginPage {
+    --background-gradient: radial-gradient(at top left, #69bdff, #378cd0);
+
+    .Background {
+        background: #69bdff;
+        background-attachment: fixed;
+    }
+
+    ion-content.LoginForm,
+    div.LoginForm {
+        background: var(--background-gradient);
+
+        form {
+            h2 {
+                margin-bottom: 1em;
+            }
+        }
+
+        div.LoginAlignment {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            transition: height 0.25s ease;
+
+            > ion-icon {
+                min-height: 40px;
+                width: 100%;
+                position: fixed;
+                margin-top: 180px;
+                transition: margin-top 0.25s ease;
+                transition-delay: 0.2s;
+            }
+        }
+    }
+}
+
+@media (max-height: 480px) {
+    .LoginPage {
+        ion-content.LoginForm {
+            div.LoginAlignment {
+                > ion-icon {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 820px) {
+    .LoginPage {
+        .Background {
+            background-size: 150%;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (min-height: 1366px) {
+    .LoginPage {
+        .Background {
+            background-size: cover;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+:root {
+    /* Layout */
+    --grid-xs: 4px;
+    --grid-s: 8px;
+    --grid-m: 12px;
+    --grid-l: 18px;
+    --grid-xl: 24px;
+    --grid-xxl: 38px;
+
+    --container-margin: 30px;
+    --container-margin-small: 18px;
+    --container-side-margins: 20px;
+    --container-margin-bottom: 40px;
+    --ion-grid-column-padding: 6px;
+
+    --inner-padding-start: 20px;
+    --inner-padding-end: 20px;
+    --amount-width: min(110px, 30vw);
+
+    /* Icons */
+    --icon-xs: 8px;
+    --icon-s: 14px;
+    --icon-m: 16px;
+    --icon: 20px;
+    --icon-l: 24px;
+    --icon-xl: 40px;
+
+    /* Typography */
+    --font-size-xs: 0.7rem;
+    --font-size-s: 0.8rem;
+    --font-size-m: 0.9rem;
+    --font-size: 1rem;
+    --font-size-l: 1.1rem;
+    --font-size-xl: 1.2rem;
+    --font-size-xxl: 1.3rem;
+    --h1: var(--font-size-xxl);
+    --h2: var(--font-size-xl);
+    --h3: var(--font-size-l);
+    --h4: var(--font-size);
+
+    /* Styling */
+    --border-radius-s: 3px;
+    --border-radius: 4px;
+    --border-radius-m: 6px;
+    --border-radius-l: 12px;
+    --item-border: 1px solid #e8e8e8;
+    --item-height-s: 30px;
+    --item-height: 60px;
+    --box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.06);
+    --box-shadow-l: 2px 3px 7px 0px rgba(0, 0, 0, 0.08);
+}

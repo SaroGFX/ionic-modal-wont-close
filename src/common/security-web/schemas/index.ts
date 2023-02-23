@@ -1,0 +1,1 @@
+export { PinFormSchema } from './PinFormSchema';

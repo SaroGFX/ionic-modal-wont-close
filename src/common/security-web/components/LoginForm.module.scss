@@ -1,0 +1,120 @@
+div.LoginForm {
+    margin-left: calc(env(safe-area-inset-right) + var(--grid-xxl));
+    margin-right: calc(env(safe-area-inset-left) + var(--grid-xxl));
+    align-self: end;
+    margin-top: auto;
+    position: relative;
+    width: min(380px + 45%, 100%);
+
+    div.Input {
+        box-shadow: 0 3px 6px rgba($color: #000, $alpha: 0.1);
+        border-radius: var(--border-radius-l);
+        margin-top: var(--grid-m);
+        box-sizing: content-box;
+        color: white;
+        font-weight: 500;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255 255 255 / 0.2);
+
+        input {
+            --placeholder-opacity: 1;
+            border-radius: var(--border-radius-l);
+            caret-color: white;
+            padding-left: 3.2em;
+            padding-right: 1.2em;
+            height: 54px;
+            transition: box-shadow 300ms;
+
+            &:focus {
+                box-shadow: 0 0 0 1px rgba(255, 255, 255, 1), 0 0 20px 0px rgba(255, 255, 255, 0.12);
+            }
+
+            &::placeholder {
+                --placeholder-color: white;
+                font-weight: 500;
+            }
+        }
+
+        ion-icon {
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 15px;
+        }
+
+        &.Error {
+            color: var(--ion-color-error);
+            background: rgba($color: white, $alpha: 0.66);
+            box-shadow: 0 0 0 1px var(--ion-color-error), 0 0 15px 0px rgba(255, 0, 0, 0.222);
+
+            input::placeholder {
+                --placeholder-color: var(--ion-color-error);
+            }
+
+            ion-icon {
+                color: var(--ion-color-error);
+            }
+
+            &:global(.item-has-focus) {
+                border: 1px solid white;
+                background: rgba($color: white, $alpha: 0);
+                color: white;
+
+                input::placeholder {
+                    --placeholder-color: white;
+                    --placeholder-opacity: 0;
+                }
+
+                ion-icon {
+                    color: white;
+                }
+            }
+        }
+
+        ion-input[name='twoFactorToken'] input {
+            letter-spacing: 4px;
+
+            &::placeholder {
+                letter-spacing: 0;
+            }
+        }
+    }
+
+    ion-text {
+        text-align: center;
+        color: white;
+
+        &.TwoFactor {
+            position: relative;
+
+            ion-icon {
+                position: absolute;
+                top: 3px;
+                margin-left: var(--grid-s);
+            }
+        }
+    }
+
+    .NoAccount {
+        text-align: center;
+        height: 75px;
+        padding-top: var(--grid-xl);
+        padding-bottom: calc(var(--grid-xl) + env(safe-area-inset-bottom));
+        color: white;
+        font-weight: 500;
+    }
+}
+
+ion-button.Button {
+    &::part(native) {
+        padding: 1.6em;
+        margin-top: var(--grid-l);
+        background-color: white;
+        border-radius: var(--border-radius-l);
+        color: #3098ed;
+        height: 50px;
+        box-shadow: 0px 3px 6px rgba($color: #000, $alpha: 0.1);
+    }
+}
