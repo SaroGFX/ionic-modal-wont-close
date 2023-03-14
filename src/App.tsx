@@ -17,6 +17,7 @@ import "@ionic/react/css/typography.css";
 import "./theme/colors.scss";
 import "./theme/variables.scss";
 
+// Test
 
 setupIonicReact({
     swipeBackEnabled: false,
